@@ -1,0 +1,427 @@
+
+@font-face {
+    font-family: "SF PRO";
+    src: url(fonts/SSF-Pro.ttf);
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "SF PRO";
+    src: url(fonts/SF-Pro-Text-Bold.otft);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: "SF PRO";
+    src: url(fonts/SF-Pro-Text-Heavy.otf);
+    font-weight: 1000;
+  }
+/*semibold*/
+  @font-face {
+    font-family: "SF PRO" ;
+    src: url(SF-Pro-Text-Semibold.otf);
+    font-weight: 600;
+  }
+
+/* Code of css */
+
+body{
+    background-color: #F1ECE6;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0%;
+    font-family: "SF Pro";
+    overflow-x: hidden;
+}
+.Header p{
+    display: inline;
+    font-size: 20px;
+    background-color: #F1ECE6;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: black;
+    opacity:0.7
+}
+
+.Header{
+    border-bottom: 0.5pt solid black;
+    z-index: 5;
+    position: relative;
+    background-color: #F1ECE6;
+    display: flex;
+}
+
+.hero h1{font-weight:1000;
+  font-size: 6rem; 
+    text-align: center;
+
+  }
+.hero h1 , .hero h2 {
+
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  ;color: black;
+  background-color: #F1ECE6;
+    mix-blend-mode: lighten;
+}
+
+.hero video {
+  z-index: -1;
+  position: absolute;
+  left: 100px;
+  overflow:hidden;
+  display:block;
+
+}
+
+#scrotase_img {
+  z-index: 2;
+position: absolute;
+top: 00px;
+
+width: 25%;
+}
+
+#adam_smith_img {
+  z-index: 2;
+position:relative;
+ left: 925px;
+top: 150px;
+}
+
+.hero h2 {
+  text-align:center; 
+  font-size: 1.875rem;
+  margin-bottom: 0px;
+}
+
+.navbar {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top:5px;
+  margin-bottom: 5px;
+  z-index: 5;
+  background-color: #F1ECE6;
+  border-bottom:0.5px solid black ;
+ font-family: "SF Pro";
+ font-size: 20px;
+}
+
+.nav-link , .nav-link .active{
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.navbar-brand{
+  opacity: 0.7;
+}
+
+.navbar-nav > li{
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.home_text{
+  position: relative;
+  top: -600px;
+}
+
+/* rect {
+  position: absolute;
+  width: 10000px;
+  height:200px;
+} */
+
+svg {
+  position: relative;
+  left:300px
+}
+
+
+
+.Sel_img{
+  width: 100%;
+  position: relative;
+
+}
+.Selction > div {
+  margin: -20px;
+}
+
+.Selction{   
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: -1000px;
+  
+}
+
+ .navbar-dark{
+  background-color: #141722;
+  border-bottom:0.5px solid #F1ECE6 ;
+}
+
+.Essay{
+  padding-left: 65px;
+  padding-right: 65px;
+}
+.Essay h1{
+  color: #EDE5DE;
+  font-size: 5.5rem;
+  font-family:"SF PRO";
+  font-weight: 1000;
+  margin-top: 50px;
+}
+
+.Essay .coin {
+  position: absolute;
+  width: 30%;
+  top: 0px;
+  left: -50px;
+  z-index: -1;
+}
+
+
+.Essay .Freud{
+  position: absolute;
+  width: 35%;
+  left: 950px;
+  top:300px;
+  z-index: -1;
+}
+
+.Essay ul {
+  display: inline-block;
+ margin-left: -100px;
+}
+
+.Essay li {
+  list-style-type: none;
+  margin-left: 200px;
+  color: #dcd4ce;
+}
+
+.Essay .context .heading{
+  color:#dcd4ce;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.Essay .content:hover {
+  text-decoration: underline;
+}
+
+.Essay .context {
+  margin-left: -125px;
+}
+
+.Essay .contet{
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+
+.articles {
+ margin-right: 20%;
+ margin-left: 20%;
+ background-color: white;
+}
+
+.articles img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 80%;
+margin-top: 4%;
+margin-bottom: 6%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  }
+
+.articles h2{
+  font-size: 15px;
+  color: #141722;
+  opacity: 0.7;
+  font-family: "SF PRO";
+}
+
+.articles h1{
+  font-size: 40pt;
+  color: #141722;
+  opacity: 0.7;
+  font-family: "SF PRO";
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+.articles p {
+  font-size: 15px;
+  color: #141722;
+  opacity: 0.7;
+}
+
+.articles h3 {
+  font-size: 14px;
+  color: #141722;
+  opacity: 0.6;
+  padding-top: 2%;
+  padding-bottom: 4%;
+  margin-left: -200px;
+}
+
+
+.articles a:hover {
+  text-decoration: underline;
+}
+
+.articles a {
+  color: #141722 ;
+  opacity: 0.7;
+  
+}
+
+.project h1 {
+  font-size: 40pt;
+  color: #141722;
+  opacity: 0.7;
+  font-family: "SF PRO";
+  font-weight: bold;
+}
+
+.project p{
+ font-size: 15px;
+ opacity: 0.7;
+ font-family: "SF PRO";
+ color: #141722;
+ margin-right: 150px;
+}
+
+.project {
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.project .coin {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 85%;
+  width: 18%;
+}
+
+.hi {
+  border-radius: 15px;
+  width:388px;
+}
+
+
+
+.work_card .text {
+  background-color: rgb(251,249,247);
+  width: 388px;
+  top: 440px;
+  margin: 0px;
+  position: absolute;
+  height: 97px;
+  border-radius: 0% 0% 15px 15px;
+  border: 1px solid black;
+}
+
+.work_card .text  p, h3{
+ color: black;
+ margin-left: 2%;
+}
+.work_card .text h3{
+  margin-top: 3%; 
+  margin-top: -25px;
+}
+.work_card .text p{
+  margin-top: -2%;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.work {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+}
+
+.work > * {
+  margin-right:20px;
+  margin-top: 15px;
+}
+
+.erro  h1{
+  font-family: "SF Pro";
+  color: #141722;
+  opacity: 0.8;
+
+}
+
+.erro{
+  margin-top: 30vh;
+}
+
+.erro h1{
+  font-size: 8rem;
+  text-align: center;
+}
+
+.erro p{
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.footer {
+background-color: #141722;
+display: flex;
+height: 31vh;
+z-index: -10;
+}
+
+.social_media {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-row-gap: 22px;
+  width: 18%;
+  padding: 50px;
+}
+  
+  .social_media img {
+  height: auto;
+  width: 70%;
+  }
+
+   h1 , .text{
+    color: #dcd4ce; 
+   }
+  
+  table td {
+    padding: 20px;
+    vertical-align: top;
+    padding-top: 0px;
+  }
+
+  .text{
+    padding-top: 40px;
+  }
+
+  .text a:hover{
+    color: #dcd4ce;
+    text-decoration: underline;
+  }
+
+.Click h1{
+  font-size: 3rem;
+  text-align: right;
+  padding-top: 30px;
+  margin-left: 75vh;
+}
+
+.Click h1:hover{
+  text-decoration: underline;
+}
