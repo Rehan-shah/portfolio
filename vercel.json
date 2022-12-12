@@ -1,0 +1,7 @@
+{
+    "version":2 ,
+    "buidls":{
+        "src":"./serve.js",
+        "use":"@vercel/node"
+    }
+}
