@@ -1,7 +1,14 @@
 {
     "version":2 ,
-    "buidls":{
+    "builds":[{
         "src":"./serve.js",
         "use":"@vercel/node"
     }
+],
+ "routes":[
+    {
+        "src":"/(.*)",
+        "dest":"/"
+    }
+ ]
 }
