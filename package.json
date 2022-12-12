@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "serve.js",
+  "type": "module",
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node serve.js",
