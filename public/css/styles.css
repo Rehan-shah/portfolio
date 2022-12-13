@@ -15,7 +15,7 @@
   @font-face {
     font-family: "SF PRO";
     src: url(fonts/SF-Pro-Text-SemiBold.otf);
-    font-weight: 500;
+    font-weight: 700;
   }
 
 
@@ -112,7 +112,7 @@ top: 150px;
 
 .nav-link , .nav-link .active{
   opacity: 0.7;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .navbar-brand{
