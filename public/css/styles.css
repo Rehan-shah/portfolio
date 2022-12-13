@@ -1,10 +1,5 @@
 
 
-@font-face {
-    font-family: "SF PRO";
-    src: url(fonts/SF-Pro.ttf);
-    font-weight: normal;
-  }
 
   @font-face {
     font-family: "SF PRO";
@@ -15,7 +10,7 @@
   @font-face {
     font-family: "SF PRO";
     src: url(fonts/SF-Pro-Text-SemiBold.otf);
-    font-weight: 700;
+    font-weight: normal;
   }
 
 
@@ -112,7 +107,6 @@ top: 150px;
 
 .nav-link , .nav-link .active{
   opacity: 0.7;
-  font-weight: 700;
 }
 
 .navbar-brand{
@@ -422,8 +416,8 @@ z-index: -10;
   font-size: 3rem;
   text-align: right;
   padding-top: 30px;
-  margin-left: 75vh;
-  padding-right: 15px;
+  margin-left: 70vh;
+  padding-right: 25px;
 }
 
 .Click h1:hover{
