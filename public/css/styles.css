@@ -1,25 +1,31 @@
+.body {
+  -moz-osx-font-smoothing: grayscale;   /* Firefox */
+   -webkit-font-smoothing: antialiased; /* WebKit  */
+}
 
 @font-face {
     font-family: "SF PRO";
-    src: url(fonts/SSF-Pro.ttf);
+    src: url(./fonts/SSF-Pro.ttf);
     font-weight: normal;
   }
+
   @font-face {
     font-family: "SF PRO";
-    src: url(fonts/SF-Pro-Text-Bold.otft);
+    src: url(fonts/SF-Pro-Text-Bold.otf);
     font-weight: bold;
   }
 
   @font-face {
     font-family: "SF PRO";
-    src: url(fonts/SF-Pro-Text-Heavy.otf);
-    font-weight: 1000;
+    src: url(fonts/SF-Pro-Text-SemiBold.otf);
+    font-weight: 900;
   }
-/*semibold*/
+
+
   @font-face {
     font-family: "SF PRO" ;
-    src: url(SF-Pro-Text-Semibold.otf);
-    font-weight: 600;
+    src: url(./fonts/SF-Pro-Text-Heavy.otf);
+    font-weight: 1000;
   }
 
 /* Code of css */
@@ -420,6 +426,7 @@ z-index: -10;
   text-align: right;
   padding-top: 30px;
   margin-left: 75vh;
+  padding-right: 15px;
 }
 
 .Click h1:hover{
