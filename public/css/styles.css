@@ -1,11 +1,8 @@
-.body {
-  -moz-osx-font-smoothing: grayscale;   /* Firefox */
-   -webkit-font-smoothing: antialiased; /* WebKit  */
-}
+
 
 @font-face {
     font-family: "SF PRO";
-    src: url(./fonts/SSF-Pro.ttf);
+    src: url(fonts/SF-Pro.ttf);
     font-weight: normal;
   }
 
