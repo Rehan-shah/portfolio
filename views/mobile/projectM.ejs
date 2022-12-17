@@ -1,0 +1,41 @@
+<%- include("headerM.ejs"); -%>
+<div class="project">
+
+<h1>My Projects</h1>
+<p>I am a webdevloper and IOS developer . I am capable of making static and dynmaic website . I also able to make serve for the spefic website need in sql and non-sqal fomrat , same can be said for ios app.</p>
+<a href="mailto:Rehansnehalshah1@gmail.com?subject=Hey , built for me&body=// please write an query or request you found have for me to built your software product
+"><img class="hire_me" src="/Project/Buttin Hire me already.svg" style="    width: 40%;
+padding-top: 20px;
+padding-bottom: 20px;" ><img/></a>
+<img class="coin" src="/Project/image 24.svg"><img/>
+
+<div class="work">
+<% links.forEach( link => { %>
+<a href="<%= link.url %>" target="_blank" ><div class="work_card">
+    <img  class="hi" src="<%= link.src %>" style="    padding-top: 10px;
+    padding-bottom: 10px;">
+<div style="background-color: white;"" class="text">
+  <h3><%= link.title %></h3>
+  <p><%= link.paragraph %></p>
+</div>
+</div></a>
+<% }) %>
+</div>
+<img  src="/Project/image 23.svg"/ style="
+    width: 50%;
+    margin-left: -50px;
+    margin-bottom: -20px;
+">
+<script>
+$('.hire_me').click(function() {
+$(this).attr('src', '/Project/Property 1=Hover.svg');
+setTimeout(function() {
+$('.hire_me').attr('src', '/Project/Buttin Hire me already.svg');
+}, 2000);
+});
+</script>
+</div>
+</div>
+<div style="width: 102.5%;">
+<%- include("footerM.ejs"); -%>
+</div>

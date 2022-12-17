@@ -28,7 +28,6 @@ body{
     padding: 0px;
     opacity: 0%;
     font-family: "SF Pro";
-    overflow-x: hidden;
 }
 .Header p{
     display: inline;
@@ -49,7 +48,7 @@ body{
 }
 
 .hero h1{font-weight:1000;
-  font-size: 6rem; 
+  font-size: 8rem; 
     text-align: center;
 
   }
@@ -65,31 +64,29 @@ body{
 
 .hero video {
   z-index: -1;
-  position: absolute;
+  position: relative;top: -700px;
   left: 100px;
-  overflow:hidden;
-  display:block;
-
 }
 
 #scrotase_img {
   z-index: 2;
 position: absolute;
-top: 00px;
+top: 150px;
 
-width: 25%;
+width: 45%;
 }
 
 #adam_smith_img {
   z-index: 2;
 position:relative;
- left: 925px;
-top: 150px;
+ left: 140px;
+ top: 680px;
+width:85% ;
 }
 
 .hero h2 {
   text-align:center; 
-  font-size: 1.875rem;
+  font-size: 3rem;
   margin-bottom: 0px;
 }
 
@@ -111,46 +108,33 @@ top: 150px;
 
 .navbar-brand{
   opacity: 0.7;
+  font-size: 3rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .navbar-nav > li{
-  padding-left:20px;
-  padding-right:20px;
+    font-size: 4rem;
+  padding-left:50px;
+  padding-right:50px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
+
+.navbar-toggler-icon{
+    width: 100px;
+    height: 100px;
+}
+.navbar-toggler {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 
 .home_text{
   position: relative;
-  top: -600px;
-}
-
-/* rect {
-  position: absolute;
-  width: 10000px;
-  height:200px;
-} */
-
-svg {
-  position: relative;
-  left:300px
-}
-
-
-
-.Sel_img{
-  width: 100%;
-  position: relative;
-
-}
-.Selction > div {
-  margin: -20px;
-}
-
-.Selction{   
-  display: inline-flex;
-  flex-wrap: wrap;
-  position: relative;
-  top: -1000px;
-  
+  top: -750px;
+  overflow: hidden;
 }
 
  .navbar-dark{
@@ -158,33 +142,32 @@ svg {
   border-bottom:0.5px solid #F1ECE6 ;
 }
 
-.Essay{
-  padding-left: 65px;
-  padding-right: 65px;
-}
-.Essay h1{
-  color: #EDE5DE;
-  font-size: 5.5rem;
-  font-family:"SF PRO";
-  font-weight: 1000;
-  margin-top: 50px;
-}
-
-.Essay .coin {
+.project .coin {
+  left: 710px;
   position: absolute;
   width: 30%;
-  top: 0px;
-  left: -50px;
+  z-index: -1;
+  top: 200px;
+}
+
+ .coin {
+  position: absolute;
+  width: 50%;
+  top: 200px;
   z-index: -1;
 }
 
+.context{
+  margin-top: 300px;
+}
 
-.Essay .Freud{
-  position: absolute;
-  width: 35%;
-  left: 950px;
-  top:300px;
+ .Freud{
   z-index: -1;
+  position: absolute;
+  width: 70%;
+  top: 1340px;
+  left: 300px;
+
 }
 
 .Essay ul {
@@ -192,15 +175,15 @@ svg {
  margin-left: -100px;
 }
 
-.Essay li {
+.context li {
   list-style-type: none;
-  margin-left: 200px;
   color: #dcd4ce;
+  font-size: 3rem;
 }
 
-.Essay .context .heading{
+.context .heading{
   color:#dcd4ce;
-  font-size: 25px;
+  font-size: 4rem;
   font-weight: bold;
 }
 
@@ -208,26 +191,19 @@ svg {
   text-decoration: underline;
 }
 
-.Essay .context {
-  margin-left: -125px;
-}
 
-.Essay .contet{
- padding-top: 10px;
- padding-bottom: 10px;
-}
 
 .articles {
- margin-right: 20%;
- margin-left: 20%;
  background-color: white;
+ margin-left: 3%;
+ margin-right: 3%;
 }
 
 .articles img {
 display: block;
 margin-left: auto;
 margin-right: auto;
-width: 80%;
+width: 100%;
 margin-top: 4%;
 margin-bottom: 6%;
 }
@@ -238,14 +214,14 @@ a {
   }
 
 .articles h2{
-  font-size: 15px;
+  font-size: 3rem;
   color: #141722;
   opacity: 0.7;
   font-family: "SF PRO";
 }
 
 .articles h1{
-  font-size: 40pt;
+  font-size: 5rem;
   color: #141722;
   opacity: 0.7;
   font-family: "SF PRO";
@@ -254,19 +230,19 @@ a {
 }
 
 .articles p {
-  font-size: 15px;
+  font-size: 2.2rem;
   color: #141722;
   opacity: 0.7;
+  text-align: justify;
 }
 
-.articles h3 {
-  font-size: 14px;
-  color: #141722;
-  opacity: 0.6;
-  padding-top: 2%;
-  padding-bottom: 4%;
-  margin-left: -200px;
+
+.articles button {
+  font-size: 2.5rem;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
+
 
 
 .articles a:hover {
@@ -280,7 +256,7 @@ a {
 }
 
 .project h1 {
-  font-size: 40pt;
+  font-size: 8rem;
   color: #141722;
   opacity: 0.7;
   font-family: "SF PRO";
@@ -288,11 +264,10 @@ a {
 }
 
 .project p{
- font-size: 15px;
- opacity: 0.7;
- font-family: "SF PRO";
- color: #141722;
- margin-right: 150px;
+  font-size: 2rem;
+  opacity: 0.7;
+  font-family: "SF PRO";
+  color: #141722;
 }
 
 .project {
@@ -301,44 +276,61 @@ a {
 
 }
 
-.project .coin {
-  z-index: -1;
-  position: absolute;
-  top: 0px;
-  left: 85%;
-  width: 18%;
-}
 
 .hi {
-  border-radius: 15px;
-  width:388px;
+  border-radius: 30px;
+  width: 788px;
+  }
+
+.main {
+  width: 2200px;
 }
 
 
+.LearnMore_btn {
+  width: 300px;
+  position: relative;
+  bottom: 400px;
+  left: 260px;
+}
 
+.scroll {
+  overflow: scroll;
+  margin-left: -60px;
+}
+
+.scroll h3 {
+  font-size: 4.5rem;
+  margin-left: 130px;
+  color: #141722;
+  opacity: 0.7;
+  margin-bottom: -70px;
+}
 .work_card .text {
+  position: relative;
   background-color: rgb(251,249,247);
-  width: 388px;
-  top: 440px;
-  margin: 0px;
-  position: absolute;
-  height: 97px;
-  border-radius: 0% 0% 15px 15px;
+  width: 788px;
+  border-radius: 0% 0% 30px 30px;
   border: 1px solid black;
+  margin-top: -210px;
 }
 
 .work_card .text  p, h3{
- color: black;
- margin-left: 2%;
+  margin-top: 2%;
+
 }
 .work_card .text h3{
-  margin-top: 3%; 
-  margin-top: -25px;
+  margin-top: 2%;
+  font-size: 4rem;
+  padding-left: 15px;
 }
-.work_card .text p{
-  margin-top: -2%;
-  font-size: 12px;
-  margin-right: 5px;
+
+.text p{
+  margin-left: 2%;
+    font-size: 1.75rem;
+    opacity: 0.7;
+    font-family: "SF PRO";
+    color: #141722;
 }
 
 .work {
@@ -356,68 +348,66 @@ a {
   font-family: "SF Pro";
   color: #141722;
   opacity: 0.8;
-
+  font-size: 9.5rem;
+  text-align: center;
 }
+
+.context h1 {
+  font-size: 7rem;
+  margin-left: 30px;
+}
+
+
 
 .erro{
   margin-top: 30vh;
 }
 
-.erro h1{
-  font-size: 8rem;
+
+
+.erro p{
+  font-size: 2rem;
   text-align: center;
 }
 
-.erro p{
-  font-size: 1.2rem;
-  text-align: center;
+.footer h3 {
+  font-size: 4rem;
+  color: #dcd4ce;
+  padding-top: 50px;
 }
 
 .footer {
 background-color: #141722;
-display: flex;
 height: 31vh;
 z-index: -10;
+overflow-x: clip;
 }
 
-.social_media {
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  grid-row-gap: 22px;
-  width: 18%;
-  padding: 50px;
+.social_media{
+  display: flex;
+  padding-top: 10px;
 }
-  
-  .social_media img {
-  height: auto;
-  width: 70%;
-  }
-
-   h1 , .text{
+.social_media img{
+  width: 150px;
+    padding-left: 10px;
+    margin-right: 30px;;
+}
+h3 , .social_media {
+  padding-left: 50px;
+}
+   h1{
     color: #dcd4ce; 
    }
   
-  table td {
-    padding: 20px;
-    vertical-align: top;
-    padding-top: 0px;
-  }
 
-  .text{
-    padding-top: 40px;
-  }
 
-  .text a:hover{
-    color: #dcd4ce;
-    text-decoration: underline;
-  }
 
 .Click h1{
-  font-size: 3rem;
+  font-size: 6rem;
   text-align: right;
-  padding-top: 30px;
-  margin-left: 70vh;
-  padding-right: 25px;
+  text-align: left;
+  padding-left: 55px;
+  padding-top: 50px;
 }
 
 .Click h1:hover{
@@ -425,4 +415,3 @@ z-index: -10;
 }
 
 
-  

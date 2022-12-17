@@ -5,6 +5,8 @@ const { render, get, links } = require("express/lib/response");
 const app = express();
 var Essay = require('./articles.json');
 const fs = require('fs');
+const request = require("request");
+const os = require('os');
 
 
 app.use(express.static('public'));
@@ -13,23 +15,53 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-app.get("/" , (req , res ) => {
-    res.render("home" , {mode : "" ,   background : " " , margin:"-60vh"})
+
+app.get("/", (req, res) => {
+    const userAgent = req.headers["user-agent"];
+
+    if (userAgent.match(/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i)) {
+        res.render("mobile/homeM" , {mode : "" ,background :""});
+        os.screen.orientation.lock('portrait');
+    } else {
+        res.render("home", {mode : "", background : "", margin:"-60vh"});
+    }
 });
 
 
+
 app.get("/Essay" , (req , res ) => {
-    res.render("Essay" , {
-        mode : "navbar-dark" ,
-        background : "  background-color: #141722;",
-        data: Essay,
-        margin:"60vh"
-    })
+    const userAgent = req.headers["user-agent"];
+
+    if (userAgent.match(/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i)) {
+        res.render("mobile/EssayM" , {mode : "navbar-dark" ,background : "  background-color: #141722;",  data:        Essay});
+        os.screen.orientation.lock('portrait');
+    } else {
+        res.render("Essay" , {
+            mode : "navbar-dark" ,
+            background : "  background-color: #141722;",
+            data: Essay,
+            margin:"60vh"
+        })
+    }
+   
 });
 
 app.get('/Essay/:Heading', (req, res) => {
     var x = req.params['Heading'];
-  
+    const userAgent = req.headers["user-agent"];
+
+    if (userAgent.match(/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i)) {
+        Essay.forEach(item => {
+            if (item.Heading == x) {
+              res.render('mobile/articleM', {
+                heading: item.Heading,
+                category: item.category,
+                content: item.Content,
+                image: item.image,
+              });
+            }
+          })
+    }else{ 
     Essay.forEach(item => {
       if (item.Heading == x) {
         res.render('article', {
@@ -39,19 +71,15 @@ app.get('/Essay/:Heading', (req, res) => {
           image: item.image,
         });
       }
-    });
+    })
+};
   
     // If no matching essay is found, return a 404 error
-    res.render(
-        "404", {
-            mode : "" ,   
-            background : " ",
-            margin:""
-        }
-    )
+    res.redirect("/efi3pi2o")
   });
 
 app.get("/project" , (req,res) => {
+    const userAgent = req.headers["user-agent"];
  let links = [{
     title:"Shift or Not",
     paragraph : "This small project check mutiple factor like hdi , cost of living and much more tto decide wherther you should more or not",
@@ -64,7 +92,13 @@ app.get("/project" , (req,res) => {
          link.src = img;
  })
 
-
+ if (userAgent.match(/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i)) {
+    res.render(
+        "mobile/projectM", {
+            mode : "" ,   
+            background : " ",
+            links : links,})
+ } else{
     res.render(
         "project", {
             mode : "" ,   
@@ -73,14 +107,27 @@ app.get("/project" , (req,res) => {
             margin:"35vh"
         }
     )
+ }
+
 })
 
 app.get("/Resume" , function(req,res){
+    const userAgent = req.headers["user-agent"];
+    let header = "partials/header" ; 
+    let footer = "partials/header"
+    let margin = "38vh";
+    if (userAgent.match(/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i)) {
+      header = "mobile/headerM.ejs";
+      footer ="mobile/footerM.ejs";
+      margin= "50vh"
+    }
     res.render (
         "under", {
             mode : "" ,   
             background : " ",
-            margin:"40vh"
+            margin:margin,
+            header:header,
+            footer:footer
         }
     )
   });
@@ -122,11 +169,22 @@ app.get("/Resume" , function(req,res){
   });
 
   app.get('*', function(req, res) {
+    const userAgent = req.headers["user-agent"];
+    let header = "partials/header" ; 
+    let footer = "partials/footer"
+    let margin = "38vh";
+    if (userAgent.match(/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i)) {
+      header = "mobile/headerM.ejs";
+      footer ="mobile/footerM.ejs";
+      margin= "50vh"
+    }
     res.render(
         "404", {
             mode : "" ,   
             background : " ",
-            margin:"38vh"
+            margin:margin,
+            header : header,
+            footer : footer 
         }
     )
   });

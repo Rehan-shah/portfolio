@@ -1,0 +1,54 @@
+<%- include("headerM.ejs"); -%>
+
+<img class="coin" src="/coin.svg"></img>
+<img class="Freud" src="/Freud.svg"><img>
+
+<div class="context">
+    <h1>Essay</h1>
+    <ul>
+     <li  class="heading">Mathmatical<br> Idea</li>
+   
+    <% data.forEach(post => { %>
+    <%    if(post.categoary == "Maths"){ %>
+        <a href="/Essay/<%= post.Heading %>"><li class="content"><%= post.Heading %></li></a>
+    <%   }}); %>
+    </ul>
+    <ul>
+       <li class="heading">Economics and Political <br> Philosophy</li> 
+        
+    <% data.forEach(post => { %>
+        <%    if(post.categoary == "Economics"){ %>
+            <a href="/Essay/<%= post.Heading %>"><li class="content"><%= post.Heading %></li></a>
+        <%   }}); %>
+    </ul>
+    <ul>
+        <li class="heading">Psycology and <br> Neuroscience </li> 
+        <% data.forEach(post => { %>
+            <%    if(post.categoary == "Psycology"){ %>
+                <a href="/Essay/<%= post.Heading %>"><li class="content"><%= post.Heading %></li></a>
+            <%   }}); %>
+    </li>
+</div>
+</div>
+<script>
+    // Get the image elements
+const $coin = $('.coin');
+const $Freud = $('.Freud');
+let x = 1340;
+let c = 200;
+
+// Add an event listener to listen for scroll events
+$(window).scroll(function() {
+  // Get the current scroll position
+  const scrollTop = $(window).scrollTop();
+
+  // Set the top position of the images to be the current scroll position
+  $coin.css('top', -0.8*scrollTop + c + 'px');
+  $Freud.css('top', 0.8*scrollTop + x + 'px');
+});
+
+</script>
+<div style="
+margin-top:600px;">
+<%- include("footerM.ejs"); -%>
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/stylesM.css">
+       
+    </head>
+    <body style="background-color:white">
+        <script>
+            window.onload = function() {
+              var body = document.querySelector('body');
+              body.style.transition = 'opacity 0.2s';
+              body.style.opacity = 1;
+            }
+            </script>
+        <div class="articles">
+      <a href="/Essay"><button  class="btn btn-outline-dark"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg> Back</button></a>
+        <h2>Author : Rehan Shah</h2>
+        <h1><%= heading %></h1>
+        <img  src="<%= image %>"/>
+        <p> <%= content %></p>
+    </div>
+        <script src="" async defer></script>
+    </body>
+</html>

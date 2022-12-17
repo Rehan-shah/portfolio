@@ -1,0 +1,83 @@
+<%- include("headerM.ejs"); -%>
+<div class="hero" style="height: 210vh;">
+    <div style="height: 40%;">
+    <img class=" Pimg"  id="scrotase_img"src="scrotase_1.svg"></img>
+    <img class="Pimg" id="adam_smith_img" src="Adam_Smith.svg"></img>
+    <div class="home_text">
+   <h2 style="margin-top: -10px;padding-bottom: 20px;">Welcome to my webite , I am a </h2>
+ <h1 style="margin-top: -10px;margin-bottom: -20px;" >
+    Website Designer 
+    <br> Interlucally dumby <br>
+     Academic</h1>
+<video  muted loop autoplay >
+    <source src="movingGradient.mp4" type="video/mp4" />
+</video>
+<video  muted loop autoplay style="    top: -1540px;">
+    <source src="movingGradient.mp4" type="video/mp4" /></video>
+</div>
+</div>
+
+<div class="scroll">
+    <h3>Scroll left to see more </h3>
+    <img class="main" src="Project/Main.jpg"></img>
+    <a href="/project"><img  class="LearnMore_btn"src="Learn More btn.svg"/></a>
+    <a href="/Essay"><img  class="LearnMore_btn"src="Learn More btn.svg"/ style="
+        left: 650px;
+    top: -350px;
+"></a>
+    <a href="/Resume"><img  class="LearnMore_btn"src="Learn More btn.svg"/ style="
+        left: 1050px;
+    "></a></div>
+</div>
+<script>
+    //parallx effect
+    $(window).scroll(function() {
+let scale_factor_1 = 0.05;
+let scale_factor_2 = -0.1;
+let c1 = 140;
+let c2 = 70;
+
+for (let i = 0; i < ($(".pallax").length); i++) {
+if($($(".pallax")[i]).attr("class").split(' ')[0] == "pallax-1") {
+var y1 = -Math.abs(this.scrollY);
+$($(".pallax")[i]).css('top',scale_factor_1*y1+c1);
+} else if($($(".pallax")[i]).attr("class").split(' ')[0] == "pallax-2") {
+var y2 = -Math.abs(this.scrollY);
+$($(".pallax")[i]).css('top',scale_factor_2*y2+c2);
+}
+}
+});
+
+    //Parallax effect 
+  let Pimgs = [];
+  let c =0; 
+   for (let i = 0; i < $(".Pimg").length; i++) {
+      Pimgs.push(  $(".Pimg")[i].id)
+      }          
+
+    $(window).scroll(function() {
+        for (let i = 0; i <Pimgs.length; i++) {
+            let c = 180 
+        if (Pimgs[i] == "adam_smith_img"){
+            c = 680;
+        } ;
+    var y = -Math.abs(this.scrollY);
+    var scale_factor = 0.3
+    $("#"+Pimgs[i]).css('top',scale_factor*y+c);
+        }
+        })
+
+   //Hover Img button 
+
+
+   $(".LearnMore_btn").on("click", function() {
+  $(this).attr("src", "LearnMoreBtnH.svg");
+  setTimeout(() => {
+    $(this).attr("src", "Learn More btn.svg");
+  }, 1000);
+});
+
+
+</script>
+
+<%- include("footerM.ejs"); -%>
