@@ -9,7 +9,6 @@ const request = require("request");
 const os = require('os');
 const UAParser = require('ua-parser-js');
 const parser = new UAParser();
-
 app.use(express.static('public'));
 const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
@@ -28,10 +27,10 @@ app.get("/", (req, res) => {
       broswer = "";
     }
     if (userAgent.match(/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i)) {
-        res.render("mobile/homeM" , {mode : "" ,background :"" , broswer:broswer});
-        os.screen.orientation.lock('portrait');
+        res.render("mobile/homeM" , {mode : "" ,background :"" , broswer:"safari"});
+
     } else {
-        res.render("home", {mode : "", background : "", margin:"-60vh" , broswer:"safari"});
+        res.render("home", {mode : "", background : "", margin:"-60vh" , broswer:broswer});
     }
 });
 
