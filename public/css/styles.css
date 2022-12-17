@@ -425,4 +425,14 @@ z-index: -10;
 }
 
 
-  
+.safari video {
+  opacity: 0%;
+}
+
+.safari h1, .safari h2 {
+  background: url("./Screenshot 2022-12-17 at 11.56.07 AM.png")
+		top;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  mix-blend-mode: normal;
+}

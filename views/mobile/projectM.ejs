@@ -21,10 +21,12 @@ padding-bottom: 20px;" ><img/></a>
 </div></a>
 <% }) %>
 </div>
-<img  src="/Project/image 23.svg"/ style="
+<img  src="/Project/image 23.svg"/ class="pillar" style="
     width: 50%;
     margin-left: -50px;
     margin-bottom: -20px;
+    position: relative;
+    z-index: -11;
 ">
 <script>
 $('.hire_me').click(function() {
@@ -32,7 +34,18 @@ $(this).attr('src', '/Project/Property 1=Hover.svg');
 setTimeout(function() {
 $('.hire_me').attr('src', '/Project/Buttin Hire me already.svg');
 }, 2000);
+}); 
+
+// Parllax effect 
+$(window).scroll(function() {
+  // Get the current scroll position
+  const scrollTop = $(window).scrollTop();
+let c= 200;
+  // Set the top position of the images to be the current scroll position
+  $(".pillar").css('top', 0.9*scrollTop +  'px');
+  $(".coin").css('top', -0.8*scrollTop + c + 'px');
 });
+
 </script>
 </div>
 </div>

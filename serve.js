@@ -7,7 +7,8 @@ var Essay = require('./articles.json');
 const fs = require('fs');
 const request = require("request");
 const os = require('os');
-
+const UAParser = require('ua-parser-js');
+const parser = new UAParser();
 
 app.use(express.static('public'));
 const port = process.env.PORT || 3000;
@@ -18,12 +19,19 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     const userAgent = req.headers["user-agent"];
-
+    parser.setUA(userAgent);
+    let broswer = "";
+    if (parser.getBrowser().name === "Safari") {
+      broswer = "safari";
+      console.log("The browser is Safari");
+    } else {
+      broswer = "";
+    }
     if (userAgent.match(/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i)) {
-        res.render("mobile/homeM" , {mode : "" ,background :""});
+        res.render("mobile/homeM" , {mode : "" ,background :"" , broswer:broswer});
         os.screen.orientation.lock('portrait');
     } else {
-        res.render("home", {mode : "", background : "", margin:"-60vh"});
+        res.render("home", {mode : "", background : "", margin:"-60vh" , broswer:broswer });
     }
 });
 

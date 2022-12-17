@@ -68,6 +68,19 @@ body{
   left: 100px;
 }
 
+.safari video {
+  opacity: 0%;
+}
+
+.safari h1, .safari h2 {
+  background: url("./Screenshot 2022-12-17 at 11.56.07 AM.png")
+		top;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  mix-blend-mode: normal;
+}
+
+
 #scrotase_img {
   z-index: 2;
 position: absolute;
@@ -295,8 +308,11 @@ a {
 }
 
 .scroll {
-  overflow: scroll;
+  overflow-x: scroll;
   margin-left: -60px;
+}
+.scroll .main {
+  overflow-x: scroll;
 }
 
 .scroll h3 {
