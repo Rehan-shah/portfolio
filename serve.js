@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
         res.render("mobile/homeM" , {mode : "" ,background :"" , broswer:broswer});
         os.screen.orientation.lock('portrait');
     } else {
-        res.render("home", {mode : "", background : "", margin:"-60vh" , broswer:broswer });
+        res.render("home", {mode : "", background : "", margin:"-60vh" , broswer:"safari"});
     }
 });
 
