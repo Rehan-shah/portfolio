@@ -89,7 +89,7 @@ app.get("/project" , (req,res) => {
     const userAgent = req.headers["user-agent"];
  let links = [{
     title:"Shift or Not",
-    paragraph : "This small project check mutiple factor like hdi , cost of living and much more tto decide wherther you should more or not",
+    paragraph : "This website checks multiple factors, such as HDI (human development index) and cost of living, to determine whether you should move to a new location or not.",
     url: "https://rehan-shah.github.io/calc/",
     src:""
  }];

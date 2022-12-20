@@ -322,7 +322,7 @@ a {
   top: 440px;
   margin: 0px;
   position: absolute;
-  height: 97px;
+  padding-bottom: 1px;
   border-radius: 0% 0% 15px 15px;
   border: 1px solid black;
 }
