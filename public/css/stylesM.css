@@ -311,9 +311,7 @@ a {
   overflow-x: scroll;
   margin-left: -60px;
 }
-.scroll .main {
-  overflow-x: scroll;
-}
+
 
 .scroll h3 {
   font-size: 4.5rem;
@@ -430,4 +428,6 @@ h3 , .social_media {
   text-decoration: underline;
 }
 
-
+.work img {
+  border: 1px black solid;
+}

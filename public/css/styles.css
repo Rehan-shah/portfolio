@@ -436,3 +436,7 @@ z-index: -10;
 	-webkit-text-fill-color: transparent;
   mix-blend-mode: normal;
 }
+
+.work img {
+  border: 1px black solid;
+}

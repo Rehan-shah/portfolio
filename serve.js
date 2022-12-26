@@ -92,11 +92,17 @@ app.get("/project" , (req,res) => {
     paragraph : "This website checks multiple factors, such as HDI (human development index) and cost of living, to determine whether you should move to a new location or not.",
     url: "https://rehan-shah.github.io/calc/",
     src:""
+ },{
+  title:"Habbit tracker",
+  paragraph:"I created this habit tracker app to help with organization. While the web app is currently being run by another party, I have provided a preview of the app for your reference.",
+  url:"https://habbit-tacker.vercel.app/",
+  src:"/Screenshot 2022-12-26 at 8.53.43 AM.png"
  }];
 
  links.forEach((link) => {
+  if(link.src === ""){
         var img = "http://s.wordpress.com/mshots/v1/" + encodeURIComponent(link.url) + "?w=400";
-         link.src = img;
+         link.src = img;}
  })
 
  if (userAgent.match(/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i)) {
